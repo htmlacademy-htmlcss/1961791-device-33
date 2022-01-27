@@ -9,7 +9,6 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
-      <h2 class="visually-hidden">Device</h2>
       <a class="logo-link" href="index.html">
         <img class="logo" src="" alt="Логотип магазина «Device».">
       </a>
@@ -21,22 +20,17 @@
 
       <ul class="navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
-            <span class="visually-hidden">Войти</span>
-          </a>
+          <a class="navigation-link" href="#">Коля Петухов</a>
+          <a class="navigation-link-sign-out" href="#">Выйти</a>
         </li>
       </ul>
 
       <ul class="navigation-basket">
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
-            <span class="visually-hidden">Сравнить</span>
-          </a>
+          <a class="navigation-link" href="#">Сравнить</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
-            <span class="visually-hidden">Корзина</span>
-          </a>
+          <a class="navigation-link" href="#">Корзина</a>
         </li>
       </ul>
 
@@ -66,17 +60,17 @@
           <a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link">Каталог товаров</a>
+          <a class="breadcrumbs-link" href="#">Каталог товаров</a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link">Моноподы для селфи</a>
+          <a class="breadcrumbs-link" href="#">Моноподы для селфи</a>
         </li>
       </ul>
     </header>
 
     <section class="filters">
-      <section class="filters-top">
-        <h3 class="filters-top">фильтр:</h3>
+      <div class="filters-top">
+        <h2 class="filters-top">фильтр:</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Цвет</legend>
@@ -129,135 +123,97 @@
                   <input class="control-input" type="radio" name="answer" value="no">
                   Нет</label>
               </li>
+            </ul>
           </fieldset>
+          <button class="button" type="submit">Показать</button>
         </form>
-        <button class="button" type="submit">Показать</button>
-      </section>
 
-      <section class="select">
-        <h3 class="select-top">сортировка:</h3>
+      </div>
+
+      <div class="select">
+        <h2 class="select-top">сортировка:</h2>
         <select class="select-control" aria-label="сортировка">
-          <option value="popular">Популярное</option>
-          <option value="cheap">Дешевое</option>
-          <option value="expensive">Дорогое</option>
+          <option value="popular">Популярные</option>
+          <option value="cheap">Дешевые</option>
+          <option value="expensive">Дорогие</option>
         </select>
 
-        <a class="sort-arrow sort-arrow-up">
-          <span class="visually-hidden" href="#">вверх</span>
-        </a>
+        <ul class="catalog-sort-buttons">
+          <li class="sort-arrow"><a href="#" class="sort-arrow-up">по возрастанию</a></li>
+          <li class="sort-arrow"><a href="#" class="sort-arrow-down">по убыванию</a></li>
+        </ul>
+      </div>
 
-        <a class="sort-arrow sort-arrow-down">
-          <span class="visually-hidden" href="#">вниз</span>
-        </a>
+      <div class="catalog-device">
+        <ul class="device-list">
+          <li class="device-card">
+            <a class="device-card-link" href="#">
+              <img class="device-card-image" src="" alt="">
+            </a>
+            <b class="device-card-title">Любительская селфи-палка</b>
+            <p class="device-card-price">500₽</p>
+          </li>
 
-      </section>
+          <li class="device-card">
+            <a class="device-card-link" href="#">
+              <img class="device-card-image" src="" alt="">
+            </a>
+            <b class="device-card-title">Профессиональная селфи-палка</b>
+            <p class="device-card-price">1500₽</p>
+          </li>
 
-      <ul class="device-list">
-        <li class="device-card">
-          <a class="device-card-link" href="#">
-            <img class="device-card-image" src="" alt="">
-            <b class="device-card-title">Любительская
-              селфи-палка</b>
-          </a>
-          <h3 class="device-card-price">500₽</h3>
-        </li>
+          <li class="device-card">
+            <a class="device-card-link" href="#">
+              <img class="device-card-image" src="" alt="">
+            </a>
+            <b class="device-card-title">Непотопляемая селфи-палка</b>
+            <p class="device-card-price">2500₽</p>
+          </li>
 
-        <li class="device-card">
-          <a class="device-card-link" href="#">
-            <img class="device-card-image" src="" alt="">
-            <b class="device-card-title">Профессиональная селфи-палка </b>
-          </a>
-          <h3 class="device-card-price">1500₽</h3>
-        </li>
-
-        <li class="device-card">
-          <a class="device-card-link" href="#">
-            <img class="device-card-image" src="" alt="">
-            <b class="device-card-title">Непотопляемая
-              селфи-палка </b>
-          </a>
-          <h3 class="device-card-price">2500₽</h3>
-        </li>
-
-        <li class="device-card">
-          <a class="device-card-link" href="#">
-            <img class="device-card-image" src="" alt="">
+          <li class="device-card">
+            <a class="device-card-link" href="#">
+              <img class="device-card-image" src="" alt="">
+            </a>
             <b class="device-card-title">Селфи-палка «Следуй за мной»</b>
-          </a>
-          <h3 class="device-card-price">1500₽</h3>
-        </li>
-      </ul>
-      <button class="button pagination-show-more" type="button">Загрузить еще</button>
+            <p class="device-card-price">1500₽</p>
+          </li>
+
+          <button class="button pagination-show-more" type="button">Загрузить еще</button>
+        </ul>
 
 
-      <ul class="pagination">
-        <li class="pagination-item">
-          <a class="pagination-link pagination-next" href="#">Назад</a>
-        </li>
 
-        <li class="pagination-item">
-          <a class="pagination-link">1</a>
-        </li>
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-next" href="#">Назад</a>
+          </li>
 
-        <li class="pagination-item">
-          <a class="pagination-link">2</a>
-        </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">1</a>
+          </li>
 
-        <li class="pagination-item">
-          <a class="pagination-link">3</a>
-        </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
 
-        <li class="pagination-item">
-          <a class="pagination-link">4</a>
-        </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
 
-        <li class="pagination-item">
-          <a class="pagination-link">5</a>
-        </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">...</a>
+          </li>
 
-        <li class="pagination-item">
-          <a class="pagination-link">6</a>
-        </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">15</a>
+          </li>
 
-        <li class="pagination-item">
-          <a class="pagination-link">7</a>
-        </li>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-next" href="#">Вперед</a>
+          </li>
+        </ul>
 
-        <li class="pagination-item">
-          <a class="pagination-link">8</a>
-        </li>
-
-        <li class="pagination-item">
-          <a class="pagination-link">9</a>
-        </li>
-
-        <li class="pagination-item">
-          <a class="pagination-link">10</a>
-        </li>
-
-        <li class="pagination-item">
-          <a class="pagination-link">11</a>
-        </li>
-
-        <li class="pagination-item">
-          <a class="pagination-link">12</a>
-        </li>
-
-        <li class="pagination-item">
-          <a class="pagination-link">13</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link">14</a>
-        </li>
-
-        <li class="pagination-item">
-          <a class="pagination-link">15</a>
-        </li>
-
-        <li class="pagination-item">
-        </li>
-      </ul>
-      <a class="pagination-link pagination-next" href="#">Вперед</a>
+      </div>
     </section>
   </main>
 
