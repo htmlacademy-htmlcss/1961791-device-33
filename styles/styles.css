@@ -35,18 +35,16 @@ body {
     font-size: 18px;
     line-height: 30px;
     font-weight: 400;
-    color:black;
-    background-color:white;
+    color: #444444;
+    background-color: #FFFFFF;
 }
-    
-    
+
 .page-header {
-    color: black;
     background-color:#FFE17F;
 }
 
 .navigation-link {
-    color: black;
+    color: #000000;
     background-color:#FFE17F;
     text-decoration: none;
 }
@@ -66,16 +64,16 @@ body {
     background-color:#FFE17F;
 }
 
-h2 {
+.main-index h2 {
     font-family: "Raleway" ,sans-serif;
-    color: black;
+    color: #000000;
     font-size: 50px;
     line-height: 50px;
 }
 
 .button {
     font-family: "Raleway" ,sans-serif;
-    color: black;
+    color: #000000;
     font-size: 18px;
     line-height: 21px;
     text-transform: uppercase;
@@ -83,27 +81,25 @@ h2 {
     text-align: center;
 }
 
-td {
-    color: black;
+.main-index td {
+    color: #000000;
     font-size: 36px;
     line-height: 30px;
 }
 
-th {
-    color: black;
+.main-index th {
     font-size: 16px;
 }
 
 .range-link{
     font-family: "Raleway" ,sans-serif;
-    color: black;
+    color: #000000;
     font-size: 18px;
     line-height: 24px;
     text-decoration: none;
 }
 
 .services{
-    color: black;
     background-color: #F0F0F0;
 }
 
@@ -115,8 +111,9 @@ th {
     line-height: 21px;
     text-transform: uppercase;
 }
+
 .delivery{
-    color: black;
+    color: #000000;
     background-color: #F0F0F0;
 }
 
@@ -128,34 +125,29 @@ th {
     line-height: 23px;
     text-transform: uppercase;
     text-decoration: none;
-
 }
+
 .about-us-item {
     font-weight: 700;
     line-height: 20px;
 }
-h3 {
+
+.main-index h3 {
     font-weight: 700;
     font-size: 24px;
 }
 
 .contact-adress-phone {
-    color: #000000;
-    text-decoration-line: underline;
-
-
+    color: #444444;
 }
 
 .subscribe {
-    color:#000000;
     background-color: #F0F0F0;
-
 }
 
 .page-footer {
     color:#FFFFFF;
     background-color: #444444;
-    
 }
 
 .footer-contact-address {
@@ -181,6 +173,68 @@ h3 {
     color:#FFFFFF;
     font-size: 16px;
     line-height: 20px;
-    text-decoration-line: underline;
 }
 
+/*catalog*/
+.navigation-link-sign-out {
+    color: #000000;
+    text-decoration: none;
+}
+
+.main-inner h1 {
+    font-family: "Raleway" ,sans-serif;
+    color:#000000;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.breadcrumbs-link{
+    color:#000000;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+.filters {
+    background: #F0F0F0;
+}
+
+.filters h2 {
+    font-family: "Raleway" ,sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.catalog-device {
+    background: #FFFFFF;
+}
+
+.device-card-title {
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.device-card-price {
+    line-height: 21px;
+}
+
+.pagination {
+    background: #EBEBEB;    
+}
+
+.pagination-link {
+    font-size: 16px;
+    line-height: 20px;
+    color: #444444;
+    text-decoration: none;
+}
+
+.pagination-next {
+    font-family: "Raleway" ,sans-serif;
+    font-weight: 800;
+    color: #000000;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
