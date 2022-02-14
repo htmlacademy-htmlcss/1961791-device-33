@@ -8,53 +8,58 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header page-container">
     <nav class="navigation">
       <a class="logo-link" href="index.html">
         <img class="logo" src="images/logo.svg" width="145" height="37" alt="Логотип магазина «Device».">
       </a>
 
-      <form class="search" action="https://echo.htmlacademy.ru/" method="post">
-        <input type="search" id="search-text" name="text" placeholder="Текст поиска">
-        <button class="search-button" type="submit">Найти</button>
-      </form>
+      <div class="header-top">
+        <form class="search-header" action="https://echo.htmlacademy.ru/" method="post">
+          <input type="search-header" id="search-text" name="text" placeholder="Текст поиска">
+          <button class="search-button" type="submit">Найти</button>
+        </form>
 
-      <ul class="navigation-user">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Коля Петухов</a>
-          <a class="navigation-link-sign-out" href="#">Выйти</a>
-        </li>
-      </ul>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Коля Петухов</a>
+            <a class="navigation-link" href="#">Войти</a>
+          </li>
+        </ul>
 
-      <ul class="navigation-basket">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Сравнить</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Корзина</a>
-        </li>
-      </ul>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Корзина</a>
+          </li>
+        </ul>
+      </div>
 
-      <ul class="navigation-list navigation-user">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Каталог</a>
-          <button type="submit">+</button>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Доставка</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Гарантия</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Контакты</a>
-        </li>
-      </ul>
+      <div class="header-bottom">
+        <ul class="navigation-menu">
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link" href="#">Каталог товаров</a>
+            <button type="submit">+</button>
+          </li>
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link" href="#">Доставка</a>
+          </li>
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link" href="#">Гарантия</a>
+          </li>
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
     </nav>
   </header>
 
   <main class="main-container main-inner">
-    <div class="page-container">
+    <div class="container-breadcrumbs">
       <header class="inner-header">
         <h1 class="inner-header-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
@@ -144,8 +149,8 @@
             </select>
 
             <ul class="catalog-sort-buttons">
-              <li class="sort-arrow"><a href="#" class="sort-arrow-up">по возрастанию</a></li>
-              <li class="sort-arrow"><a href="#" class="sort-arrow-down">по убыванию</a></li>
+              <li class="visually-hidden"><a href="#" class="sort-arrow-up">по возрастанию</a></li>
+              <li class="visually-hidden"><a href="#" class="sort-arrow-down">по убыванию</a></li>
             </ul>
           </div>
 
@@ -181,7 +186,7 @@
               </li>
             </ul>
 
-            <button class="button pagination-show-more" type="button">Загрузить еще</button>
+            <button class="button-pagination-show-more" type="button">Загрузить еще</button>
 
             <ul class="pagination">
               <li class="pagination-item">

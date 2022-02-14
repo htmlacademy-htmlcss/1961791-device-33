@@ -39,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    min-width: 100%;
+    min-width: 1440px;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 30px;
@@ -48,28 +48,115 @@ body {
     background-color: #FFFFFF;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .page-header {
     background-color:#FFE17F;
+}
+ 
+.search-header {
+    width: 517px;
+    height: 40px;
+}
+
+.logo-link {
+    display: block;
+    margin:0;
 }
 
 .navigation {
     display: flex;
+    flex-wrap: wrap;
     width: 1040px;
+    height: 175px;
     margin: 0 auto;
     padding:0 60px;
 }
 
+.navigation-list:not(:last-child){
+    justify-content: space-between;
+}
+
+.navigation-item:last-child {
+    display: flex;
+}
+
+.header-top {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
 .navigation-link {
+    display: block;
+    flex-wrap: wrap;
     color: #000000;
     background-color:#FFE17F;
     text-decoration: none;
+    padding-right: 28px;
 }
 
-.navigation-list {
+.header-bottom {
     font-family: "Raleway" ,sans-serif; 
     line-height: 21px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.navigation-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-menu-item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigation-menu-item:nth-child(1) {
+    width: 293px;
+    height: 50px;
+    margin-right: 276px;
+}
+
+.navigation-menu-item:nth-child(2) {
+    width: 125px;
+}
+
+.navigation-menu-item:nth-child(3){
+    width: 121px;
+    margin-left:47px;
+}
+
+.navigation-menu-item:nth-child(4) {
+    width: 128px;
+    margin-right: 0;
+    margin-left: 51px;
+}
+
+.navigation-menu-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.navigation-list {
+    width: 241px;
+    height: 30px;
+    margin: 0;
+    padding-left: 13px;
+    display: flex;
+    list-style-type: none;
 }
 
 .page-container{
@@ -102,7 +189,7 @@ body {
 }
 
 .main-container {
-flex-grow: 1;
+    flex-grow: 1;
 }
 
 .main-index h2 {
@@ -110,6 +197,8 @@ flex-grow: 1;
     color: #000000;
     font-size: 50px;
     line-height: 50px;
+    margin-top: 40px;
+    margin-bottom: 48px;
 }
 
 .button {
@@ -134,14 +223,15 @@ flex-grow: 1;
 
 .range-list {
     display: flex;
-    flex-direction: row;
     padding-left: 0;
+    list-style-type: none;
+    margin: 70px 0;
+    text-align: start;
 }
 
 .range-item {
     width: 160px;
-    height: 60px;
-    padding-right: 40px;
+    margin-right: 40px;
 }
 
 .range-link{
@@ -176,7 +266,12 @@ flex-grow: 1;
 .service-nav {
     display: flex;
     margin: 0;
+}
 
+.service-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .service-description {
@@ -185,20 +280,26 @@ flex-grow: 1;
     padding-left: 123px;
 }
 
+.delivery {
+    margin:70px 0;
+}
+
 .delivery-link {
-    height: 100px;
     font-family: "Raleway" ,sans-serif;
     color: #000000;
-    background-color:  #F0F0F0;
+    background-color: #F0F0F0;
     font-size: 20px;
     line-height: 23px;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 40px 125px 40px 125px;
+    text-align: center;
 }
 
 .about-company {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
 }
 
 .about-us {
@@ -224,14 +325,31 @@ flex-grow: 1;
     color: #444444;
 }
 
+.contacts-schedule {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 .subscribe {
     background-color: #F0F0F0;
 }
 
-.subscribe-container{
+.subscribe-container {
+    display: flex;
+    flex-direction: row;
     width: 1160px;
     margin: 0 auto;
 }
+
+.newsletter {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    width: 1160px;
+}
+
 
 .page-footer {
     color:#FFFFFF;
@@ -242,21 +360,38 @@ flex-grow: 1;
     display: flex;
     width: 1160px;
     margin: 0 auto;
-    padding: 0 140px;
+    padding:62px;
 }
 
 .footer-contacts{
+    display: block;
     width: 234px;
+    height: 182px;
 }
 
 .footer-contact-address {
     font-size: 16px;
     line-height: 19px;
+    margin-top: 35px;
 }
 
 .footer-service {
     width:444px;
-    padding-left: 117px;
+    padding: 75px 117px 61px 190px;
+}
+
+.footer-service-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 62px;
+}
+
+.footer-service-item:not(:last-child) {
+    margin-right: 35px;
 }
 
 .footer-service-link {
@@ -268,15 +403,35 @@ flex-grow: 1;
     text-decoration: none;
 }
 
+.footer-social {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 147px;
+}
+
+.footer-social-item {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
 .footer-button {
     color:#FFFFFF;
     text-decoration: none;
 }
  
 .footer-tel {
-    margin-left: auto;
-    max-width:190px;
+    width: 175px;
+    height: 116px;
+    margin-top: 78px;
 }
+ .footer-address {
+     padding-bottom: 63px;
+ }
 
 .footer-contact-adress-phone {
     color:#FFFFFF;
@@ -297,11 +452,24 @@ flex-grow: 1;
     line-height: 50px;
 }
 
+.container-breadcrumbs {
+    margin-left: 200px;
+}
+
+
+.breadcrumbs {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 35px;
+    padding: 0; 
+}
+
 .breadcrumbs-link{
     color:#000000;
     font-size: 16px;
     line-height: 19px;
     text-decoration: none;
+    margin-right: 36px;
 }
 
 .filters {
@@ -337,11 +505,17 @@ flex-grow: 1;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 20px 30px 20px 40px;
 }
+
+.catalog-sort-buttons {
+    display: flex;
+}
+
 
 .catalog-device {
     background: #FFFFFF;
-    padding: 70px 40px 78px 40px;
+    padding: 70px 40px;
 }
 
 .device-list {
@@ -368,11 +542,28 @@ flex-grow: 1;
     line-height: 21px;
 }
 
+.button-pagination-show-more{
+    font-family: Raleway;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 18px 294.5px;
+    text-transform: uppercase;
+    margin-top: 44px;
+}
+
 .pagination {
     background: #EBEBEB;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;    
+    justify-content: space-between;
+    list-style-type: none;
+    margin-top: 26px;
+    padding: 25px;   
+}
+
+.pagination-item {
+    display: block;
+    width: 128px;
 }
 
 .pagination-link {

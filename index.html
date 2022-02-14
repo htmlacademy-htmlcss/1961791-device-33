@@ -14,41 +14,45 @@
         <img class="logo" src="images/logo.svg" width="145" height="37" alt="Логотип магазина «Device».">
       </a>
 
-      <form class="search" action="https://echo.htmlacademy.ru/" method="post">
-        <input type="search" id="search-text" name="text" placeholder="Текст поиска">
-        <button class="search-button" type="submit">Найти</button>
-      </form>
+      <div class="header-top">
+        <form class="search-header" action="https://echo.htmlacademy.ru/" method="post">
+          <input type="search-header" id="search-text" name="text" placeholder="Текст поиска">
+          <button class="search-button" type="submit">Найти</button>
+        </form>
 
-      <ul class="navigation-user">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Войти</a>
-        </li>
-      </ul>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Войти</a>
+          </li>
+        </ul>
 
-      <ul class="navigation-basket">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Сравнить</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Корзина</a>
-        </li>
-      </ul>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Корзина</a>
+          </li>
+        </ul>
+      </div>
 
-      <ul class="navigation-list">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Каталог товаров</a>
-          <button type="submit">+</button>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Доставка</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Гарантия</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Контакты</a>
-        </li>
-      </ul>
+      <div class="header-bottom">
+        <ul class="navigation-menu">
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link" href="#">Каталог товаров</a>
+            <button type="submit">+</button>
+          </li>
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link" href="#">Доставка</a>
+          </li>
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link" href="#">Гарантия</a>
+          </li>
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -102,7 +106,7 @@
         </div>
 
         <div class="slider">
-          <h2 class="visually-hidden" hidden>Умные часы</h2>
+          <h2 class="visually-hidden">Умные часы</h2>
           <div class="slider-image">
             <img class="slider-image" src="images/slider/slider-2.png" width="560" height="560" alt="Умные часы.">
             <button class="slider-button slider-prev" type="button">
@@ -131,7 +135,7 @@
         </div>
 
         <div class="slider">
-          <h2 class="visually-hidden" hidden>Селфи-палка</h2>
+          <h2 class="visually-hidden">Селфи-палка</h2>
           <div class="slider-image">
             <img class="slider-image" src="images/slider/slider-3.png" width="560" height="560" alt="Селфи-палка.">
             <button class="slider-button slider-prev" type="button">
@@ -166,7 +170,7 @@
       </section>
 
       <section class="range">
-        <h2 class="visually-hidden" hidden>Ассортимент товаров</h2>
+        <h2 class="visually-hidden">Ассортимент товаров</h2>
         <ul class="range-list">
           <li class="range-item">
             <a class="range-link" href="#">Виртуальная
@@ -193,7 +197,7 @@
 
     <section class="services">
       <div class="services-container page-container">
-        <h2 class="visually-hidden" hidden>Услуги</h2>
+        <h2 class="visually-hidden">Услуги</h2>
         <div class="service-nav">
           <ul class="service-list">
             <li class="service-item">
@@ -215,18 +219,18 @@
               мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </div>
 
-          <div class="service services-description-warranty service-show">
+          <!---<div class="service services-description-warranty service-show">
             <h2 class="service-title">Гарантия</h2>
             <p>Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
-          </div>
+        </div>
 
-          <div class="service services-description-credit service-show">
-            <h2 class="service-title">Кредит</h2>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
-              кредита. Выгодные для банка, разумеется.</p>
-          </div>
+        <div class="service services-description-credit service-show">
+          <h2 class="service-title">Кредит</h2>
+          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
+            кредита. Выгодные для банка, разумеется.</p>
+        </div>--->
         </div>
       </div>
     </section>
@@ -240,7 +244,7 @@
       </section>
 
       <section class="about-company">
-        <h2 class="visually-hidden" hidden>О компании и контактная информация</h2>
+        <h2 class="visually-hidden">О компании и контактная информация</h2>
         <section class="about-us">
           <h2>О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
@@ -289,6 +293,9 @@
         <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,
           <br>длительными тест-драйвами, распаковками, а также акции,<br> спецпредложения и вот это вот всё.
         </p>
+      </div>
+
+      <div class="newsletter">
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="newsletter-email" placeholder="Ваш e-mail" type="email">
           <button class="newsletter-button button" type="submit">Подписаться</button>
