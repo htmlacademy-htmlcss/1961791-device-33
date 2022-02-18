@@ -64,36 +64,57 @@ body {
 }
  
 .search-header {
-    width: 517px;
-    height: 40px;
+    display: flex;
+    margin-right: 27px;
 }
 
 .logo-link {
     display: block;
-    margin:0;
+    height: 37px;/*если я не ставлю высоту то расстояние больше*/
+}
+
+.search-input {
+   background-color: transparent; 
+   min-width: 359px;
+   min-height: 40px;
+   border: solid;
+   border-top-left-radius: 100px;
+   border-bottom-left-radius: 100px;
+   border-right-style: none;
+}
+
+.input{
+    padding-left: 108px;
+}
+
+.search-button {
+    margin: 0;
+    min-width: 160px;
+    background-color: transparent; 
+    border: solid;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .navigation {
-    display: flex;
-    flex-wrap: wrap;
     width: 1040px;
     height: 175px;
     margin: 0 auto;
-    padding:0 60px;
+    padding:0 60px 30px 60px;
 }
 
-.navigation-list:not(:last-child){
-    justify-content: space-between;
-}
-
-.navigation-item:last-child {
+.navigation-item {
     display: flex;
+    margin-left: 25px;
 }
 
 .header-top {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 50px;
+    margin-top: 30px;
+    align-items: center;
 }
 
 .navigation-link {
@@ -102,7 +123,12 @@ body {
     color: #000000;
     background-color:#FFE17F;
     text-decoration: none;
-    padding-right: 28px;
+    padding-left: 12px;
+}
+
+.navigation-login {
+    margin-right: auto;
+    margin-left: 0;
 }
 
 .header-bottom {
@@ -114,35 +140,25 @@ body {
 
 .navigation-menu {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
 }
 
+.navigation-menu-item:first-child {
+    margin-right: auto;
+}
+
 .navigation-menu-item {
-    margin: 0;
+    margin-right: 47px;
     padding: 0;
     list-style-type: none;
 }
 
-.navigation-menu-item:nth-child(1) {
-    width: 293px;
-    height: 50px;
-    margin-right: 276px;
-}
-
-.navigation-menu-item:nth-child(2) {
-    width: 125px;
-}
-
-.navigation-menu-item:nth-child(3){
-    width: 121px;
-    margin-left:47px;
-}
-
-.navigation-menu-item:nth-child(4) {
-    width: 128px;
+.navigation-menu-item:last-child {
     margin-right: 0;
-    margin-left: 51px;
+    margin-left: 4px;
 }
 
 .navigation-menu-link {
@@ -151,12 +167,12 @@ body {
 }
 
 .navigation-list {
-    width: 241px;
-    height: 30px;
-    margin: 0;
-    padding-left: 13px;
     display: flex;
+    justify-content: flex-end;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 245px;
 }
 
 .page-container{
@@ -221,17 +237,21 @@ body {
     font-size: 16px;
 }
 
+.range {
+    margin: 70px auto; 
+}
+
 .range-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-left: 0;
     list-style-type: none;
-    margin: 70px 0;
-    text-align: start;
+    margin:0;
 }
 
 .range-item {
     width: 160px;
-    margin-right: 40px;
 }
 
 .range-link{
@@ -240,6 +260,8 @@ body {
     font-size: 18px;
     line-height: 24px;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 .services{
@@ -275,13 +297,12 @@ body {
 }
 
 .service-description {
-    display: flex;
     width: 448px;
     padding-left: 123px;
 }
 
 .delivery {
-    margin:70px 0;
+    margin: 70px 0;
 }
 
 .delivery-link {
@@ -350,10 +371,30 @@ body {
     width: 1160px;
 }
 
-
 .page-footer {
     color:#FFFFFF;
     background-color: #444444;
+    padding:61px 140px;
+}
+
+.footer-contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.footer-contact-address {
+    width: 239px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.about-text {
+    margin: 0;
+    padding: 0;
 }
 
 .page-footer-container {
@@ -363,23 +404,6 @@ body {
     padding:62px;
 }
 
-.footer-contacts{
-    display: block;
-    width: 234px;
-    height: 182px;
-}
-
-.footer-contact-address {
-    font-size: 16px;
-    line-height: 19px;
-    margin-top: 35px;
-}
-
-.footer-service {
-    width:444px;
-    padding: 75px 117px 61px 190px;
-}
-
 .footer-service-list {
     margin: 0;
     padding: 0;
@@ -387,10 +411,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 62px;
 }
 
-.footer-service-item:not(:last-child) {
+.footer-service-item {
     margin-right: 35px;
 }
 
@@ -403,40 +426,42 @@ body {
     text-decoration: none;
 }
 
-.footer-social {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 147px;
-}
-
-.footer-social-item {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-}
-
 .footer-button {
     color:#FFFFFF;
     text-decoration: none;
 }
- 
-.footer-tel {
-    width: 175px;
-    height: 116px;
-    margin-top: 78px;
-}
- .footer-address {
-     padding-bottom: 63px;
- }
 
 .footer-contact-adress-phone {
     color:#FFFFFF;
     font-size: 16px;
     line-height: 20px;
+}
+
+.footer-service {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-social-item {
+    margin-right: 15px;
+    /*для визуализации*/
+    background:gray;
+    width: 40px;
+    height: 40px;
+}
+
+.name-social {
+    padding: 11px 16px;
 }
 
 /*catalog*/
@@ -450,12 +475,18 @@ body {
     color:#000000;
     font-size: 50px;
     line-height: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .container-breadcrumbs {
-    margin-left: 200px;
+    width: 1160px;
+    margin:0 auto;
 }
 
+.inner-header {
+    margin: 35px 60px;
+}
 
 .breadcrumbs {
     list-style-type: none;
@@ -492,6 +523,12 @@ body {
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
+}
+
+.catalog-filter-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .catalog-right-column{
@@ -544,9 +581,10 @@ body {
 
 .button-pagination-show-more{
     font-family: Raleway;
+    font-weight: 800;
     font-size: 16px;
     line-height: 19px;
-    padding: 18px 294.5px;
+    padding: 18px 295px;
     text-transform: uppercase;
     margin-top: 44px;
 }

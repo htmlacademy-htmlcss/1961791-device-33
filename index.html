@@ -16,12 +16,12 @@
 
       <div class="header-top">
         <form class="search-header" action="https://echo.htmlacademy.ru/" method="post">
-          <input type="search-header" id="search-text" name="text" placeholder="Текст поиска">
+          <input class="search-input" type="search" id="search-text" name="text" placeholder="Текст поиска">
           <button class="search-button" type="submit">Найти</button>
         </form>
 
         <ul class="navigation-list">
-          <li class="navigation-item">
+          <li class="navigation-item navigation-login">
             <a class="navigation-link" href="#">Войти</a>
           </li>
         </ul>
@@ -39,8 +39,7 @@
       <div class="header-bottom">
         <ul class="navigation-menu">
           <li class="navigation-menu-item">
-            <a class="navigation-menu-link" href="#">Каталог товаров</a>
-            <button type="submit">+</button>
+            <a class="navigation-menu-link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="navigation-menu-item">
             <a class="navigation-menu-link" href="#">Доставка</a>
@@ -219,18 +218,18 @@
               мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </div>
 
-          <!---<div class="service services-description-warranty service-show">
+          <div class="service services-description-warranty service-show">
             <h2 class="service-title">Гарантия</h2>
             <p>Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
-        </div>
+          </div>
 
-        <div class="service services-description-credit service-show">
-          <h2 class="service-title">Кредит</h2>
-          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
-            кредита. Выгодные для банка, разумеется.</p>
-        </div>--->
+          <div class="service services-description-credit service-show">
+            <h2 class="service-title">Кредит</h2>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
+              кредита. Выгодные для банка, разумеется.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -306,58 +305,55 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer-container">
-      <section class="footer-contacts">
-        <a class="logo-link" href="index.html">
-          <img class="footer-contacts-logo" src="images/logo-footer.svg" width="145" height="36"
-            alt="Логотип магазина «Device».">
-        </a>
-        <address class="footer-contact-address">
-          <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        </address>
-      </section>
+    <a class="logo-link" href="index.html">
+      <img class="footer-contacts-logo" src="images/logo-footer.svg" width="145" height="36"
+        alt="Логотип магазина «Device».">
+    </a>
+    <section class="footer-contacts">
+      <address class="footer-contact-address">
+        <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+      </address>
 
-      <section class="footer-service">
-        <ul class="footer-service-list">
-          <li class="footer-service-item">
-            <a class="footer-service-link" href="#">Доставка</a>
-          </li>
-          <li class="footer-service-item">
-            <a class="footer-service-link" href="#">Гарантия</a>
-          </li>
-          <li class="footer-service-item">
-            <a class="footer-service-link" href="#">Контакты</a>
-          </li>
-        </ul>
+      <ul class="footer-service-list">
+        <li class="footer-service-item">
+          <a class="footer-service-link" href="#">Доставка</a>
+        </li>
+        <li class="footer-service-item">
+          <a class="footer-service-link" href="#">Гарантия</a>
+        </li>
+        <li class="footer-service-item">
+          <a class="footer-service-link" href="#">Контакты</a>
+        </li>
+      </ul>
 
-        <ul class="footer-social">
-          <li class="footer-social-item">
-            <a class="footer-button" href="https://www.facebook.com/htmlacademy">
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-button" href="https://www.instagram.com/htmlacademy">
-              <span class="visually-hidden">Инстаграм</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-button" href="https://twitter.com/htmlacademy_ru">
-              <span class="visually-hidden">Твиттер</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <address class="footer-address">
+        <a class="footer-contact-adress-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      </address>
+    </section>
 
-      <section class="footer-tel">
-        <address class="footer-address">
-          <a class="footer-contact-adress-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        </address>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-          <img class="htmlacademy-link-logo" src="images/htmlacademy.svg" alt="Логотип htmlacademy.">
-        </a>
-      </section>
-    </div>
+    <section class="footer-service">
+      <ul class="footer-social">
+        <li class="footer-social-item">
+          <a class="footer-button" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="footer-button" href="https://www.instagram.com/htmlacademy">
+            <span class="visually-hidden">Инстаграм</span>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a class="footer-button" href="https://twitter.com/htmlacademy_ru">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+      </ul>
+
+      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+        <img class="htmlacademy-link-logo" src="images/htmlacademy.svg" alt="Логотип htmlacademy.">
+      </a>
+    </section>
   </footer>
 </body>
 
