@@ -505,14 +505,14 @@ body {
 }
 
 .filters-container {
-    width: 1060px;
+    width: 1160px;
     margin: 0 auto;
     display: flex;
 }
 
 .filters-top{
     margin-top: 25px;
-    margin-right: 60px;
+    margin-left: 60px;
 }
 
 .filters h2 {
@@ -522,6 +522,10 @@ body {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+}
+
+.catalog-filter {
+    margin-right: 60px;
 }
 
 .catalog-filter-list {
