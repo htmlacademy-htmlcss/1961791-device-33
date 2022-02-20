@@ -65,7 +65,6 @@ body {
  
 .search-header {
     display: flex;
-    margin-right: 27px;
 }
 
 .logo-link {
@@ -105,13 +104,10 @@ body {
 
 .navigation-item {
     display: flex;
-    margin-left: 25px;
 }
 
 .header-top {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     margin-bottom: 50px;
     margin-top: 30px;
     align-items: center;
@@ -123,7 +119,7 @@ body {
     color: #000000;
     background-color:#FFE17F;
     text-decoration: none;
-    padding-left: 12px;
+    padding-left: 26px;
 }
 
 .navigation-login {
@@ -168,14 +164,15 @@ body {
 
 .navigation-list {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-left: 26px;
     width: 245px;
 }
 
-.page-container{
+.page-container {
     width: 1160px;
     margin: 0 auto;
 }
@@ -508,13 +505,13 @@ body {
 }
 
 .filters-container {
-    width: 1160px;
+    width: 1060px;
     margin: 0 auto;
     display: flex;
 }
 
 .filters-top{
-    width: 200px;
+    margin-top: 25px;
     margin-right: 60px;
 }
 
@@ -523,6 +520,8 @@ body {
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
+    margin: 0;
+    padding: 0;
 }
 
 .catalog-filter-list {
@@ -540,6 +539,7 @@ body {
 .sorting {
     display: flex;
     flex-direction: row;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px 30px 20px 40px;
@@ -549,44 +549,52 @@ body {
     display: flex;
 }
 
-
 .catalog-device {
     background: #FFFFFF;
     padding: 70px 40px;
+    display: grid;
+    gap: 44px;
+    grid-auto-columns: 760px;
 }
 
 .device-list {
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 360px);
+    gap: 44px 40px;
 }
 
 .device-card {
-    width: 360px;
-    height: 452px;
     display: flex;
     flex-direction: column;
+}
+
+.device-card-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
 }
 
 .device-card-title {
     font-weight: 700;
     line-height: 20px;
+    width: 260px;
 }
 
 .device-card-price {
     line-height: 21px;
+    margin: 0;
 }
 
-.button-pagination-show-more{
-    font-family: Raleway;
+.button-pagination-show-more {
+    font-family: "Raleway" ,sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
     padding: 18px 295px;
     text-transform: uppercase;
-    margin-top: 44px;
 }
 
 .pagination {
@@ -595,8 +603,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
     list-style-type: none;
-    margin-top: 26px;
-    padding: 25px;   
+    margin: 0;
+    padding: 25px;
+    margin-bottom: 8px;   
 }
 
 .pagination-item {
