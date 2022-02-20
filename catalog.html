@@ -23,7 +23,9 @@
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">Коля Петухов</a>
-            <a class="navigation-link" href="#">Войти</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link logout" href="#">Выйти</a>
           </li>
         </ul>
 
@@ -82,7 +84,30 @@
           <h2 class="filters-top">фильтр:</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Цена</legend>
+
+              <label class="catalog-filter-label">
+                от <input class="catalog-filter-input" type=" number" name="min-price">
+              </label>
+
+              <label class="catalog-filter-label">
+                до <input class="catalog-filter-input" type=" number" name="min-price">
+              </label>
+
+              <button class="range-toggle toggle-min">
+                <span class="visually-hidden">Изменить минимальную цену.</span>
+              </button>
+              <button class="range-toggle toggle-min">
+                <span class="visually-hidden">Изменить максимальную цену.</span>
+              </button>
+
+            </fieldset>
+
+
+            <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Цвет</legend>
+
+
 
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
@@ -141,7 +166,7 @@
 
         <div class="catalog-right-column">
           <div class="sorting">
-            <h2 class="sorting-top">сортировка:</h2>
+            <h2 class="sorting-top">Cортировка:</h2>
             <select class="sorting-control" aria-label="сортировка">
               <option value="popular">Популярные</option>
               <option value="cheap">Дешевые</option>
@@ -159,30 +184,38 @@
               <li class="device-card">
                 <img class="device-card-image" src="images/catalog/product-1.jpg" width="360" height="380"
                   alt="Любительская селфи-палка.">
-                <b class="device-card-title">Любительская селфи-палка</b>
-                <p class="device-card-price">500₽</p>
+                <div class="device-card-content">
+                  <b class="device-card-title">Любительская селфи-палка</b>
+                  <p class="device-card-price">500 ₽</p>
+                </div>
               </li>
 
               <li class="device-card">
 
                 <img class="device-card-image" src="images/catalog/product-2.jpg" width="360" height="380"
                   alt="Профессиональная селфи-палка.">
-                <b class="device-card-title">Профессиональная селфи-палка</b>
-                <p class="device-card-price">1500₽</p>
+                <div class="device-card-content">
+                  <b class="device-card-title">Профессиональная селфи-палка</b>
+                  <p class="device-card-price">1500 ₽</p>
+                </div>
               </li>
 
               <li class="device-card">
                 <img class="device-card-image" src="images/catalog/product-3.jpg" width="360" height="380"
                   alt="Непотопляемая селфи-палка.">
-                <b class="device-card-title">Непотопляемая селфи-палка</b>
-                <p class="device-card-price">2500₽</p>
+                <div class="device-card-content">
+                  <b class="device-card-title">Непотопляемая селфи-палка</b>
+                  <p class="device-card-price">2500 ₽</p>
+                </div>
               </li>
 
               <li class="device-card">
                 <img class="device-card-image" src="images/catalog/product-4.jpg" width="360" height="380"
                   alt="Селфи-палка «Следуй за мной».">
-                <b class="device-card-title">Селфи-палка «Следуй за мной»</b>
-                <p class="device-card-price">1500₽</p>
+                <div class="device-card-content">
+                  <b class="device-card-title">Селфи-палка «Следуй за мной»</b>
+                  <p class="device-card-price">1500 ₽</p>
+                </div>
               </li>
             </ul>
 
@@ -221,6 +254,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="page-footer">
