@@ -61,7 +61,6 @@ body {
 
 .page-header {
     width: 1160px;
-    height: 186px;
     margin: 0 auto;
     position: relative;
 }
@@ -355,6 +354,8 @@ body {
     letter-spacing: 0.2em;
     cursor: pointer;
     padding: 10px 0;
+    border: none;
+    background-color: transparent;
     z-index: 1;
 }
 
@@ -868,22 +869,55 @@ body {
 }
 
 .inner-header {
-    margin: 35px 60px;
+    margin: 72px 60px 32px 60px;
 }
 
 .breadcrumbs {
-    list-style-type: none;
     display: flex;
-    margin-bottom: 35px;
-    padding: 0; 
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 16px;
+}
+
+.breadcrumbs-item {
+    position: relative;
+    margin-right: 36px;
+}
+
+.breadcrumbs-item::after {
+    position: absolute;
+    content: "";
+    background-image: url("../images/breadcrumbs.svg");
+    background-position: right;
+    top: 12px;
+    right: -20px;
+    width: 4px;
+    height: 7px;
+}
+
+.breadcrumbs-item:last-child::after {
+    content: none;
 }
 
 .breadcrumbs-link{
-    color:#000000;
+    color: #000000;
     font-size: 16px;
     line-height: 19px;
     text-decoration: none;
-    margin-right: 36px;
+}
+
+.breadcrumbs-link:hover {
+    opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+    opacity: 0.3;
+}
+
+.breadcrumbs-link:focus {
+    border: 2px solid #AF4FFF;
 }
 
 .filters {
@@ -911,10 +945,6 @@ body {
     letter-spacing: .2em;
 }
 
-.catalog-filter {
-    margin-right: 60px;
-}
-
 .catalog-filter-list {
     margin: 0;
     padding: 0;
@@ -933,11 +963,43 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 30px 20px 40px;
+    padding: 20px 40px;
 }
 
 .catalog-sort-buttons {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    cursor: pointer;
     display: flex;
+}
+
+.sort-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+}
+
+.sort-arrow {
+    opacity: 0.2;
+}  
+
+.sort-arrow-down {
+    transform: rotate(180deg);
+}
+
+.sort-buttons-link:hover {
+    opacity: 0.5;
+}
+
+.sort-buttons-link:active {
+    opacity: 1;
+}
+
+.sort-buttons:focus {
+    border: 2px solid #AF4FFF;
+    opacity: 0.3;
 }
 
 .catalog-device {
@@ -957,21 +1019,74 @@ body {
     gap: 44px 40px;
 }
 
+.info-button {
+    font-family: "Raleway" ,sans-serif;
+    color: #000000;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.info-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: #FFE17F;
+    z-index: -1;
+    top: 6px;
+}
+
 .device-card {
     display: flex;
     flex-direction: column;
+    position: relative;
+    cursor: pointer;
 }
 
 .device-card-image {
     position: relative;
+    max-width: 100%;
+    border: 1px solid #444444;
 }
 
 .hover-image {
     position: absolute;
-    margin: 180px 75px;
+    display: none;
+    cursor: pointer;
+    padding: 181px 76px;
+    background-color: rgba(240, 240, 240, 0.8);
 }
-.device-card:hover {
+
+.device-card:hover .hover-image {
+    display: flex;
+}
+
+.device-card:hover .device-card-content {
     opacity: 0.6;
+}
+
+.device-card:active .device-card-content {
+    opacity: 0.3;
+}
+
+.device-card:active .info-button::before {
+    display: flex;
+    background: #FFC700;
+}
+
+.device-card:focus {
+    border: 2px solid #AF4FFF;
+    box-sizing: border-box;
 }
 
 .device-card-content {
@@ -996,35 +1111,45 @@ body {
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
-    padding: 18px 295px;
+    letter-spacing: 0.2em;
+    padding: 18px 0;
     text-transform: uppercase;
+    background-color: transparent;
+    border: 3px solid #E5E5E5;
+    box-sizing: border-box;
+}
+
+.button-pagination-show-more:hover {
+    border: 3px solid #000000;
+}
+
+.button-pagination-show-more:active {
+    opacity: 0.3;
+}
+
+.button-pagination-show-more:focus {
+    border: 2px solid #AF4FFF;
+}
+
+.pagination-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #EBEBEB;
 }
 
 .pagination {
-    background: #EBEBEB;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0;
     margin: 0;
-    padding: 25px;
-    margin-bottom: 8px;   
 }
 
 .pagination-item {
-    display: block;
-    width: 128px;
-}
-
-.pagination-link {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    font-size: 16px;
-    line-height: 20px;
-    color: #444444;
-    text-decoration: none;
+    align-items: center;
 }
 
 .pagination-next {
@@ -1034,6 +1159,66 @@ body {
     font-size: 18px;
     line-height: 21px;
     text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.pagination-next-page {
+    opacity: 0.3;
+}
+
+.pagination-next-page:hover {
+    opacity: 1;
+}
+
+.pagination-next-page:active {
+    opacity: 0.1;
+}
+.pagination-next-page:focus {
+    opacity: 0.3;
+    border: 2px solid #AF4FFF;
+}
+
+.pagination-next:hover {
+    background-color: #DCDCDC;
+}
+
+.pagination-next:active{
+    opacity: 0.3;
+    background-color: #DCDCDC;
+}
+
+.pagination-next:focus {
+    background-color: #F0F0F0;
+    border: 2px solid #AF4FFF;
+}
+
+.pagination-link { 
+    font-size: 16px;
+    line-height: 20px;
+    color: #444444;
+    text-decoration: none;
+    margin: 0;
+    width:40px;
+    list-style-type: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.pagination-current {
+   opacity: 0.6; 
+}
+
+.pagination-number:active {
+    color: #444444;
+    opacity: 0.1;
+}
+
+.pagination-number:focus {
+    color: #444444;
+    opacity: 0.3;
+    border: 2px solid #AF4FFF;
 }
 
 .navigation-item:hover,
@@ -1043,7 +1228,7 @@ body {
 .slider-button:hover,
 .logo-link-header:hover .logo,
 .footer-contacts-logo:hover,
-.navigation-menu-link:hover {
+.navigation-menu-item:hover {
     opacity: 0.6;
 }
 
