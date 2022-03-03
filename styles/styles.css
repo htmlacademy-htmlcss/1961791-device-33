@@ -1050,6 +1050,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    cursor: pointer;
 }
 
 .device-card-image {
@@ -1070,15 +1071,15 @@ body {
     display: flex;
 }
 
-.device-card-content:hover {
+.device-card:hover .device-card-content {
     opacity: 0.6;
 }
 
-.device-card-content:active {
+.device-card:active .device-card-content {
     opacity: 0.3;
 }
 
-.device-card:active .hover-image .info-button::before {
+.device-card:active .info-button::before {
     display: flex;
     background: #FFC700;
 }
