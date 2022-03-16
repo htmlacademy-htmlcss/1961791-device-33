@@ -462,8 +462,9 @@ background-color: #000000;
   opacity: 1;
 }
 
-.navigation-catalog-link:focus {
+.navigation-catalog-link:focus + .catalog-menu {
   outline: 2px solid #af4fff;
+  display: block;
 }
 
 .catalog-menu {
@@ -523,7 +524,7 @@ background-color: #000000;
   opacity: 0.3;
 }
 
-.catalog-menu-link:focus{
+.catalog-menu-link:focus  {
   outline: 2px solid #af4fff;
 }
 
@@ -2004,7 +2005,7 @@ opacity: 0.6;
 .slider-button:focus,
 .range-item:focus-within,
 .delivery-link:focus,
-.logo-link-header:focus .logo,
+.logo-link-header:focus ,
 .footer-contact-adress-phone:focus,
 .logo-link:focus-within,
 .footer-service-link:focus,
