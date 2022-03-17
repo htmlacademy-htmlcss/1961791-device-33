@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -28,7 +29,7 @@
 
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-link-account" href="#">
               <svg class="navigation-icon" aria-hidden="true" focusable="false" width="13" height="13" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -129,7 +130,8 @@
       <div class="header-bottom">
         <ul class="navigation-menu">
           <li class="navigation-menu-item navigation-menu-catalog">
-            <a class="navigation-catalog-link" href="catalog.html">Каталог товаров</a>
+            <a class="navigation-catalog-link" href="catalog.html">Каталог товаров
+            </a>
             <div class="catalog-menu">
               <ul class="catalog-menu-list">
                 <li class="catalog-menu-item">
@@ -321,62 +323,75 @@
           <div class="catalog-device">
             <ul class="device-list">
               <li class="device-card">
-                <img class="device-card-image" src="images/catalog/product-1.jpg" width="360" height="380"
-                  alt="Любительская селфи-палка.">
+                <a class="device-card-link" href="#">
+                  <img class="device-card-image" src="images/catalog/product-1.jpg" width="360" height="380"
+                    alt="Любительская селфи-палка.">
+
+                  <div class="device-card-content">
+                    <b class="device-card-title">Любительская<br>
+                      селфи-палка</b>
+                    <p class="device-card-price">500 ₽</p>
+                  </div>
+                </a>
                 <div class="hover-image">
                   <button type="button" class="info-button more-button">
                     Подробнее
                   </button>
                 </div>
-                <div class="device-card-content hover-card-content">
-                  <b class="device-card-title">Любительская селфи-палка</b>
-                  <p class="device-card-price">500 ₽</p>
+              </li>
+
+              <li class="device-card device-card-new">
+                <a class="device-card-link" href="#">
+                  <img class="device-card-image" src="images/catalog/product-2.jpg" width="360" height="380"
+                    alt="Профессиональная селфи-палка.">
+
+                  <div class="device-card-content">
+                    <b class="device-card-title">Профессиональная<br>селфи-палка </b>
+                    <p class="device-card-price">1 500 ₽</p>
+                  </div>
+                </a>
+                <div class="hover-image">
+                  <button type="button" class="info-button more-button">
+                    Подробнее
+                  </button>
                 </div>
               </li>
 
               <li class="device-card">
-
-                <img class="device-card-image" src="images/catalog/product-2.jpg" width="360" height="380"
-                  alt="Профессиональная селфи-палка.">
+                <a class="device-card-link" href="#">
+                  <img class="device-card-image" src="images/catalog/product-3.jpg" width="360" height="380"
+                    alt="Непотопляемая селфи-палка.">
+                  <div class="device-card-content">
+                    <b class="device-card-title">Непотопляемая<br>
+                      селфи-палка</b>
+                    <p class="device-card-price">2 500 ₽</p>
+                  </div>
+                </a>
                 <div class="hover-image">
                   <button type="button" class="info-button more-button">
                     Подробнее
                   </button>
-                </div>
-                <div class="device-card-content">
-                  <b class="device-card-title">Профессиональная селфи-палка</b>
-                  <p class="device-card-price">1500 ₽</p>
                 </div>
               </li>
 
               <li class="device-card">
-                <img class="device-card-image" src="images/catalog/product-3.jpg" width="360" height="380"
-                  alt="Непотопляемая селфи-палка.">
-                <div class="hover-image">
-                  <button type="button" class="info-button more-button">
-                    Подробнее
-                  </button>
-                </div>
-                <div class="device-card-content">
-                  <b class="device-card-title">Непотопляемая селфи-палка</b>
-                  <p class="device-card-price">2500 ₽</p>
-                </div>
-              </li>
+                <a class="device-card-link" href="#">
+                  <img class="device-card-image" src="images/catalog/product-4.jpg" width="360" height="380"
+                    alt="Селфи-палка «Следуй за мной».">
 
-              <li class="device-card">
-                <img class="device-card-image" src="images/catalog/product-4.jpg" width="360" height="380"
-                  alt="Селфи-палка «Следуй за мной».">
+                  <div class="device-card-content">
+                    <b class="device-card-title">Селфи-палка «Следуй за&nbsp;мной»</b>
+                    <p class="device-card-price">1 500 ₽</p>
+                  </div>
+                </a>
                 <div class="hover-image">
                   <button type="button" class="info-button more-button">
                     Подробнее
                   </button>
-                </div>
-                <div class="device-card-content">
-                  <b class="device-card-title">Селфи-палка «Следуй за мной»</b>
-                  <p class="device-card-price">1500 ₽</p>
                 </div>
               </li>
             </ul>
+
 
             <button class="button-pagination-show-more" type="button">Загрузить еще
             </button>
@@ -439,7 +454,7 @@
         </ul>
 
         <address class="footer-address">
-          <a class="footer-contact-adress-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          <a class="footer-contact-adress-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         </address>
       </section>
 
