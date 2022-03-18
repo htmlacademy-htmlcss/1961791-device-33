@@ -214,8 +214,18 @@ body {
   opacity:  0.6;
 }
 
-.navigation-link:active, .navigation-link:active {
+.navigation-link:active,
+.navigation-link:active,
+.navigation-link-account:active {
   opacity: 0.3;
+}
+
+.navigation-link:focus {
+  outline: 2px solid #af4fff;
+}
+
+.navigation-link-account:focus {
+outline: 2px solid #af4fff;
 }
 
 .navigation-icon {
@@ -462,9 +472,17 @@ background-color: #000000;
   opacity: 1;
 }
 
-.navigation-catalog-link:focus + .catalog-menu {
-  outline: 2px solid #af4fff;
+.navigation-menu-item:focus-within  .catalog-menu {
   display: block;
+}
+
+.navigation-catalog-link:focus-within {
+  outline: 2px solid #af4fff;
+  z-index: 2;
+}
+
+.catalog-menu-link:focus {
+  outline: 2px solid #af4fff;
 }
 
 .catalog-menu {
@@ -489,7 +507,6 @@ background-color: #000000;
   font-size: 16px;
   line-height: 18px;
   text-transform: none;
-  text-decoration: none;
   color: #000000;
   cursor: pointer;
 }
@@ -504,11 +521,13 @@ background-color: #000000;
 }
 
 .catalog-menu-link {
+  color: #000000;
+  text-decoration: none;
   padding: 0;
   margin: 0;
 }
 
-.catalog-menu-link:not(:last-child) {
+.catalog-menu-link {
   padding-bottom: 19px;
 }
 
@@ -522,10 +541,6 @@ background-color: #000000;
 
 .catalog-menu-link:active {
   opacity: 0.3;
-}
-
-.catalog-menu-link:focus  {
-  outline: 2px solid #af4fff;
 }
 
 .navigation-list {
@@ -617,9 +632,8 @@ background-color: #000000;
   flex-wrap: wrap;
   justify-content: end;
   position: absolute;
-  top: 375px;
   right: 0;
-  bottom: 0px;
+  bottom: 183px;
   left: 0;
   z-index: 1;
 }
@@ -708,6 +722,7 @@ background-color: #000000;
   font-family: "Raleway", sans-serif;
   color: #000000;
   font-size: 50px;
+  font-weight: 800;
   line-height: 50px;
   margin: 0 auto;
   margin-top: 10px;
@@ -1052,6 +1067,7 @@ position: relative;
 }
 
 .contact-adress-phone {
+  font-style: normal;
   color: #444444;
 }
 
@@ -1139,6 +1155,7 @@ opacity: 0.5;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
   border: 3px solid #c4c4c4;
@@ -1206,11 +1223,11 @@ opacity: 0.5;
 .footer-service-list {
   margin: 0;
   padding: 0;
-  padding-right: 44px;
+  padding-right: 76px;
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  gap: 35px;
+  grid-template-columns: 125px 121px 128px;
 }
 
 .footer-service-item {
@@ -1255,13 +1272,6 @@ opacity: 0.5;
   font-style: normal;
 }
 
-.footer-contact-adress-phone {
-  color:#ffffff;
-  font-size: 16px;
-  line-height: 20px;
-  font-style: normal;
-}
-
 .footer-service {
   display: flex;
   align-items: center;
@@ -1282,7 +1292,19 @@ opacity: 0.5;
 }
 
 .footer-address {
-  padding-right: 2px;
+  width: 175px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-style: normal;
+  flex-wrap: wrap;
+  padding-top: 7px;
+}
+
+.footer-contact-adress-phone {
+  color:#ffffff;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .footer-social {
@@ -1321,7 +1343,7 @@ opacity: 0.5;
 
 /*catalog*/
 .logout {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
   text-align: center;
   padding-right: 5px;
 }
@@ -1748,7 +1770,7 @@ opacity: 0.5;
   text-align: center;
   letter-spacing: 0.2em;
   cursor: pointer;
-  padding: 0;
+  padding: 10px 0;
   border: none;
   background-color: transparent;
   z-index: 1;
@@ -1762,16 +1784,16 @@ opacity: 0.5;
   height: 8px;
   background-color: #ffe17f;
   z-index: -1;
-  top: 6px;
+  top: 16px;
 }
 
 .device-card {
   display: flex;
-  flex-direction: column;position: relative;
+  flex-direction: column;
+  position: relative;
 }
 
 .device-card-link {
-
   color: #000000;
   text-decoration: none;
   cursor: pointer;
@@ -1802,12 +1824,12 @@ opacity: 0.5;
   position: absolute;
   display: none;
   cursor: pointer;
-  padding: 161px 68px;
+  padding: 151px 68px;
   background-color: rgba(240, 240, 240, 0.8);
 }
 
 .device-card:hover .hover-image {
-  display: flex;
+  display: block;
 }
 
 .device-card:hover .device-card-content {
@@ -1819,11 +1841,26 @@ opacity: 0.5;
 }
 
 .device-card:active .info-button::before {
-  display: flex;
-  background: #ffc700;
+  background: #ffcc33;
 }
 
-.device-card-link:focus {
+.info-button:hover {
+  background-color: #ffe17f;
+}
+
+.info-button:active {
+  background-color: #ffcc33;
+}
+
+.device-card:focus-within .hover-image {
+  display: flex;
+}
+
+.info-button:focus {
+  outline: 2px solid #af4fff;
+}
+
+.device-card-link:focus-within{
   outline: 2px solid #af4fff;
 }
 
@@ -1862,7 +1899,8 @@ opacity: 0.5;
 }
 
 .button-pagination-show-more:active {
-  opacity: 0.3;
+  border-color:rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .button-pagination-show-more:focus {
@@ -1993,12 +2031,15 @@ opacity: 0.6;
   background-color: #ffe17f;
 }
 
+.button:active:before {
+  background-color: #ffcc33;
+}
+
 .button:active {
   background-color: #ffcc33;
 }
 
 .button:focus,
-.navigation-link:focus,
 .footer-social-item:focus-within,
 .slider-next:focus,
 .slider-prev:focus,
@@ -2040,7 +2081,7 @@ outline: 2px solid #af4fff;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
   display: flex;
-  z-index: 1;
+  z-index: 3;
 }
 
 .modal-container-close {
@@ -2050,8 +2091,10 @@ outline: 2px solid #af4fff;
 .modal {
   position: relative;
   margin: auto;
+  margin-top: 612px;
   border: 10px solid #000000;
-  padding: 62px 70px 72px;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 62px 70px 61px;
   background-color: #ffffff;
 }
 
@@ -2064,13 +2107,13 @@ outline: 2px solid #af4fff;
   width: 26px;
   height: 26px;
   border: none;
-  background-image: url("../images/close.svg");
+  background-image: url("../images/close-modal.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
   cursor: pointer;
   top: 74px;
-  right: 80px;
+  right: 70px;
 }
 
 .modal-close-button:active {
@@ -2129,7 +2172,7 @@ outline: 2px solid #af4fff;
 .field-form {
   width: 320px;
   padding: 20px;
-  margin-right: 40px;
+  margin-right: 41px;
   margin-top: 14px;
   background-color: #f0f0f0;
   border: transparent;
@@ -2147,9 +2190,8 @@ outline: 2px solid #af4fff;
 
 .tooltip {
   position: absolute;
-  right: 32px;
-  margin-top: -4px;
-  margin-left: 2px;
+  right: 35px;
+  top: -3px;
 }
 
 .tooltip-icon {
@@ -2172,6 +2214,7 @@ outline: 2px solid #af4fff;
 
 .tooltip-text {
   background-color: #000000;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
   color: #ffffff;
   font-family: inherit;
   font-weight: 400;
@@ -2183,7 +2226,7 @@ outline: 2px solid #af4fff;
   position: absolute;
   margin-top: 10px;
   right: 58%;
-  z-index: 1;
+  z-index: 4;
   transform: translateX(20%);
   display: none;
 }
@@ -2207,13 +2250,13 @@ outline: 2px solid #af4fff;
 .auth-form-name {
   background-image: url("../images/modal-user.svg");
   background-repeat: no-repeat;
-  background-position: right 24px center;
+  background-position: right 20px center;
 }
 
 .auth-form-email {
   background-image: url("../images/mail.svg");
   background-repeat: no-repeat;
-  background-position: right 24px center;
+  background-position: right 20px center;
 }
 
 .bring-sth-form {
@@ -2320,7 +2363,7 @@ outline: 2px solid #af4fff;
 }
 
 .send-button {
-  width: 160px;
+  width: 204px;
   height: 40px;
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -2332,7 +2375,7 @@ outline: 2px solid #af4fff;
   background-color: transparent;
   z-index: 1;
   cursor: pointer;
-  margin-top: 52px;
+  margin-top: 43px;
   position: relative;
 }
 
