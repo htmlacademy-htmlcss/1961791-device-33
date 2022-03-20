@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -23,6 +24,7 @@
 
       <div class="header-top">
         <form class="search-header" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="search-text">Поиск по сайту.</label>
           <input class="search-input" type="search" id="search-text" name="text" placeholder="Текст поиска">
           <button class="search-button" type="submit">Найти</button>
         </form>
@@ -128,40 +130,41 @@
       </div>
 
       <div class="header-bottom">
-        <ul class="navigation-menu">
-          <li class="navigation-menu-item">
-            <a class="navigation-catalog-link" href="catalog.html">Каталог товаров
-            </a>
-            <div class="catalog-menu">
-              <ul class="catalog-menu-list">
-                <li class="catalog-menu-item">
-                  <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
-                  <a class="catalog-menu-link" href="#">Моноподы для cелфи</a>
-                  <a class="catalog-menu-link" href="#">Экшн-камеры</a>
-                </li>
+        <div class="navigation-menu-item">
+          <a class="navigation-catalog-link" href="catalog.html">Каталог товаров
+          </a>
+          <div class="catalog-menu">
+            <ul class="catalog-menu-list">
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
+                <a class="catalog-menu-link" href="#">Моноподы для cелфи</a>
+                <a class="catalog-menu-link" href="#">Экшн-камеры</a>
+              </li>
 
-                <li class="catalog-menu-item">
-                  <a class="catalog-menu-link" href="#">Фитнес-браслеты</a>
-                  <a class="catalog-menu-link" href="#">Умные часы</a>
-                </li>
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Фитнес-браслеты</a>
+                <a class="catalog-menu-link" href="#">Умные часы</a>
+              </li>
 
-                <li class="catalog-menu-item">
-                  <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="navigation-menu-item">
-            <a class="navigation-menu-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-menu-item">
-            <a class="navigation-menu-link" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-menu-item">
-            <a class="navigation-menu-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </div>
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      <ul class="navigation-menu">
+        <li class="navigation-menu-item">
+          <a class="navigation-menu-link" href="#">Доставка</a>
+        </li>
+        <li class="navigation-menu-item">
+          <a class="navigation-menu-link" href="#">Гарантия</a>
+        </li>
+        <li class="navigation-menu-item">
+          <a class="navigation-menu-link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
 
     </nav>
   </header>

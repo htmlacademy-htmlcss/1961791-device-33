@@ -65,7 +65,6 @@ body {
   position: relative;
   margin-top: 40px;
   background-color: #ffe17f;
-  min-height: 300px;
 }
 
 .page-header-catalog {
@@ -409,27 +408,24 @@ background-color: #000000;
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .navigation-menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  gap: 49px;
+  grid-template-columns: 125px 121px 128px;
   margin: 0;
   padding: 0;
-}
-
-.navigation-menu-item:first-child {
-  margin-right: 276px;
+  z-index: 1;
 }
 
 .navigation-menu-item {
   padding: 0;
   list-style-type: none;
-}
-
-.navigation-menu-item:not(:last-child,:first-child) {
-  margin-right: 43px;
+  width: 550px;
 }
 
 .navigation-menu-link {
@@ -572,6 +568,16 @@ background-color: #000000;
   position: relative;
 }
 
+.slider-wrapper::before {
+  content: "";
+  position: absolute;
+  background-color: #FFE17F;
+  height: 300px;
+  width: 1160px;
+  z-index: -1;
+  top: -150px;
+}
+
 .slider-arrows {
   width: 530px;
   display: flex;
@@ -616,8 +622,7 @@ background-color: #000000;
 
 .sliders {
   position: relative;
-  top: -150px;
-  margin-bottom: -90px;
+  margin-bottom: 60px;
 }
 
 .sliders-indicator {
@@ -749,9 +754,9 @@ background-color: #000000;
 }
 
 .range-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 160px 160px 160px 160px 160px 160px;
   padding-left: 0;
   list-style-type: none;
   margin:0;

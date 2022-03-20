@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -23,6 +24,7 @@
 
       <div class="header-top">
         <form class="search-header" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="search-text">Поиск по сайту.</label>
           <input class="search-input" type="search" id="search-text" name="text" placeholder="Поиск по сайту"
             value="Текст поиска">
           <button class="search-button" type="submit">Найти</button>
@@ -126,29 +128,30 @@
       </div>
 
       <div class="header-bottom">
+        <div class="navigation-menu-item">
+          <a class="navigation-catalog-link" href="catalog.html">Каталог товаров
+          </a>
+          <div class="catalog-menu">
+            <ul class="catalog-menu-list">
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
+                <a class="catalog-menu-link" href="#">Моноподы для cелфи</a>
+                <a class="catalog-menu-link" href="#">Экшн-камеры</a>
+              </li>
+
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Фитнес-браслеты</a>
+                <a class="catalog-menu-link" href="#">Умные часы</a>
+              </li>
+
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <ul class="navigation-menu">
-          <li class="navigation-menu-item">
-            <a class="navigation-catalog-link" href="catalog.html">Каталог товаров
-            </a>
-            <div class="catalog-menu">
-              <ul class="catalog-menu-list">
-                <li class="catalog-menu-item">
-                  <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
-                  <a class="catalog-menu-link" href="#">Моноподы для cелфи</a>
-                  <a class="catalog-menu-link" href="#">Экшн-камеры</a>
-                </li>
-
-                <li class="catalog-menu-item">
-                  <a class="catalog-menu-link" href="#">Фитнес-браслеты</a>
-                  <a class="catalog-menu-link" href="#">Умные часы</a>
-                </li>
-
-                <li class="catalog-menu-item">
-                  <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
-                </li>
-              </ul>
-            </div>
-          </li>
           <li class="navigation-menu-item">
             <a class="navigation-menu-link" href="#">Доставка</a>
           </li>
@@ -200,10 +203,8 @@
 
             <div class="description">
               <span class="slider-number">01</span>
-              <h2 class="slider-slogan">Порхает как бабочка, <br>жалит как пчела!</h2>
-              <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
-                замаскированным под стандартную камеру.</p>
-
+              <h2 class="slider-slogan">Порхает как бабочка, жалит как пчела!</h2>
+              <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
               <div class="sliders-buttons">
                 <a class="more-button button" href="#">Подробнее</a>
               </div>
@@ -238,11 +239,9 @@
             </div>
 
             <div class="description">
-              <span class="slider-number">020</span>
+              <span class="slider-number">02</span>
               <h2 class="slider-slogan">Худеем правильно!</h2>
-              <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия
-                и
-                соблюдать диету.</p>
+              <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
               <div class="sliders-buttons">
                 <a class="more-button button" href="#">Подробнее</a>
               </div>
@@ -276,7 +275,7 @@
             <div class="description">
               <span class="slider-number">03</span>
               <h2 class="slider-slogan">Делай селфи, как Бен Стиллер! </h2>
-              <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь,
+              <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
                 Карл!) метров длиной и весом всего 5 кг.
               </p>
               <div class="sliders-buttons">
@@ -318,7 +317,7 @@
             </a>
           </li>
           <li class="range-item">
-            <a class="range-link" href="#">
+            <a class="range-link" href="catalog.html">
               <div class="range-image range-image-phone">
                 <svg width="87" height="117" viewBox="0 0 87 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -405,7 +404,8 @@
           <div class=" services-description-delivery service-show">
             <div class="service">
               <h2 class="service-title">Доставка</h2>
-              <p>Мы с удовольствием доставим ваш товар прямо к&#160;вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <p>Мы с удовольствием доставим ваш товар прямо к&#160;вашему подъезду совершенно бесплатно! Ведь мы
+                неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
           </div>
 
@@ -491,7 +491,8 @@
 
       <div class="newsletter">
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="newsletter-email" placeholder="Ваш e-mail" type="email">
+          <label class="visually-hidden" for="newsletter-email">Ваш e-mail.</label>
+          <input class="newsletter-email" id="newsletter-email" placeholder="Ваш e-mail" type="email">
           <button class="newsletter-button" type="submit">Подписаться</button>
         </form>
         <p class="subscribe-free">Это бесплатно</p>
